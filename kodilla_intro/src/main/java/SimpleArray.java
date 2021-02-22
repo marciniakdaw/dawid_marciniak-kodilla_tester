@@ -10,9 +10,10 @@ public class SimpleArray {
         String car = cars[3];
         String country = countries[3];
         int numberOfElements = cars.length;
+        System.out.println("");
         System.out.println("Na mojej liście znajduje się " + numberOfElements + " marek aut.");
         System.out.println("Jedno z moich ulubionych to: " + car + ".");
-        System.out.println("Producja " + car + " odbywa się w " + country);
+        System.out.println("Produkcja " + car + " odbywa się w " + country + ".");
 
     }
 }
