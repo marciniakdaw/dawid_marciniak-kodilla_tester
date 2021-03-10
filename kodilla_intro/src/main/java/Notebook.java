@@ -15,10 +15,10 @@ public class Notebook {
     }
 
     public void checkPrice(){
-        if (this.price < 600){
+        if (price < 600){
             System.out.println("This notebook is very cheap.");
         }
-        else if (600 <= this.price && this.price <= 1000){
+        else if (price <= 1000){
             System.out.println("The price is good.");
         }
         else {
@@ -27,10 +27,10 @@ public class Notebook {
     }
 
     public void checkWeight(){
-        if (this.weight < 600){
+        if (weight < 600){
             System.out.println("This notebook is light.");
         }
-        else if (600 <= this.weight && this.weight <= 1000){
+        else if (weight <= 1000){
             System.out.println("This notebook is not heavy.");
         }
         else {
@@ -38,10 +38,10 @@ public class Notebook {
         }
     }
     public void ramSizeCheck(){
-        if (this.ramSize < 4){
+        if (ramSize < 4){
             System.out.println("This notebook has to small RAM for work.");
         }
-        else if (4 <= this.ramSize && this.ramSize <= 8){
+        else if (ramSize <= 8){
             System.out.println("This notebook has enough memory space for every day use and work.");
         }
         else {
@@ -67,6 +67,17 @@ public class Notebook {
             default:
                 System.out.println("Unknown processor.");
         }
+    }
 
+    public void yearPriceComparison(){
+        if (year < 2018 && price > 2000){
+            System.out.println("The price of this computer is too high comparing to year of production.");
+        }
+        else if (year > 2018 && price < 1500){
+            System.out.println("This is quite good offer.");
+        }
+        else if (year > 2020 && (ramSize > 16 || processorClass.equals("i7")) && price < 2500){
+            System.out.println("Buy it!");
+        }
     }
 }
