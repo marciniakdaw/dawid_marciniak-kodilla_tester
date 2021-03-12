@@ -2,7 +2,6 @@ public class Grades {
 
     private int [] grades;
     private int size;
-    private int sumOfGrades;
 
 
     public Grades() {
@@ -18,23 +17,20 @@ public class Grades {
         this.size++;
     }
 
-    public int[] getGrades() {
-        return grades;
+    public int returnLastAdded() {
+        int lastAdded = grades[size-1];
+        return lastAdded;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public int countSumOfGrades() {
-        getSize();
-        getGrades();
-        for (int i = 0; i == size; i++) {
+    public float countAverageOfGrades() {
+        int sumOfGrades = 0;
+        for (int i = 0; i <= size; i++) {
             sumOfGrades += grades[i];
         }
-        this.sumOfGrades = sumOfGrades;
-        return sumOfGrades;
+        float averageOfGrades = (sumOfGrades / size);
+        return averageOfGrades;
     }
+
 }
 
 
