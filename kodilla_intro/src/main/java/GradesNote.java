@@ -2,21 +2,23 @@ public class GradesNote {
 
     public static void main(String[] args) {
 
-       Grades dodaj = new Grades();
-       Grades pobierz = new Grades();
+       Grades grades = new Grades();
 
-       dodaj.add(3);
-       dodaj.add(4);
-       dodaj.add(5);
-       dodaj.add(6);
+       grades.add(3);
+       grades.add(3);
+       grades.add(3);
+       grades.add(3);
+       grades.add(3);
+       grades.add(1);
 
-       pobierz.getGrades();
-       pobierz.getSize();
+       double average = grades.countAverageOfGrades();
+       System.out.println("\nAverage of grades is: " + average);
 
-        var a = pobierz.getGrades();
-        int b = pobierz.getSize();
+       int lastAdded = grades.returnLastAdded();
+       System.out.println("Last added grade is: " + lastAdded);
 
-        System.out.println(pobierz.getSize());
+
+
 
 
     }

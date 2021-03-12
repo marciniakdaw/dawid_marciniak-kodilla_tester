@@ -22,12 +22,12 @@ public class Grades {
         return lastAdded;
     }
 
-    public float countAverageOfGrades() {
-        int sumOfGrades = 0;
+    public double countAverageOfGrades() {
+        double sumOfGrades = 0;
         for (int i = 0; i <= size; i++) {
             sumOfGrades += grades[i];
         }
-        float averageOfGrades = (sumOfGrades / size);
+        double averageOfGrades = (sumOfGrades / size);
         return averageOfGrades;
     }
 
